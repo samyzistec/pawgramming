@@ -9,3 +9,36 @@ GET http://127.0.0.1:8000/hello/User
 Accept: application/json
 
 ###
+
+# Nuevo endpoint de recomendación de corners
+POST http://127.0.0.1:8000/recommendations/corners
+Content-Type: application/json
+
+[
+  {"type": "corner", "result": "goal"},
+  {"type": "corner", "result": "miss"},
+  {"type": "corner", "result": "miss"},
+  {"type": "corner", "result": "goal"}
+]
+
+# Jugador encontrado
+GET http://127.0.0.1:8000/players/10/stats
+Accept: application/json
+
+###
+
+# Jugador no encontrado
+GET http://127.0.0.1:8000/players/99/stats
+Accept: application/json
+
+###
+
+# Eventos de partido
+GET http://127.0.0.1:8000/matches/101/events
+Accept: application/json
+
+###
+
+# Partido no encontrado
+GET http://127.0.0.1:8000/matches/999/events
+Accept: application/json

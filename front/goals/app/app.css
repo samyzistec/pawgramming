@@ -13,3 +13,8 @@ body {
     color-scheme: dark;
   }
 }
+
+
+.main-view-container {
+    @apply relative flex flex-row items-center justify-center bg-white dark:bg-gray-950 h-screen;
+}

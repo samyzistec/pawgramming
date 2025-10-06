@@ -9,10 +9,10 @@ export function Welcome() {
                     </p>
 
                     <div className="pt-10 flex justify-between gap-4">
-                        <button className="boton-blanco" type="button">
+                        <button className="boton" type="button">
                             ¡Vamos!
                         </button>
-                        <button className="boton-blanco" type="button">
+                        <button className="boton" type="button">
                             ¡Vamos!
                         </button>
                     </div>

@@ -14,7 +14,7 @@ body {
     @apply relative flex flex-row items-center justify-center bg-white h-screen;
 }
 
-.boton-blanco {
+.boton {
     background-color: rgba(3, 23, 61, 0.83);
     color: #ffffff;
     border: none;
@@ -27,7 +27,7 @@ body {
     width: 50%;
 }
 
-.boton-blanco:hover {
+.boton:hover {
     background-color: #e3f2fd; /* azul claro */
     color: #03173d;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);

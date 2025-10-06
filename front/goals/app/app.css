@@ -5,15 +5,33 @@
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
+/* Fondo general */
 html,
 body {
-    @apply bg-white; /* fondo blanco fijo */
+    @apply bg-white;
 }
 
+/* Contenedor principal: texto a la izquierda, logo a la derecha */
 .main-view-container {
-    @apply relative flex flex-row items-center justify-center bg-white h-screen;
+    @apply relative flex flex-row items-center justify-center gap-12 px-6 bg-white h-screen;
 }
 
+/* Columna de texto (¡Hola!, pregunta y botones) */
+.content-col {
+    width: clamp(320px, 38vw, 560px); /* Mantiene proporción adaptable */
+}
+
+/* Fila de botones/dropdown: dos columnas iguales */
+.cta-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: clamp(280px, 60vw, 520px); /* ancho proporcional al viewport */
+}
+
+/* ------------------------- */
+/* BOTÓN ESTILO PERSONALIZADO */
+/* ------------------------- */
 .boton {
     background-color: rgba(3, 23, 61, 0.83);
     color: #ffffff;
@@ -24,7 +42,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     transition: all 0.3s ease;
-    width: 50%;
+    width: 100%;
 }
 
 .boton:hover {
@@ -32,4 +50,41 @@ body {
     color: #03173d;
     box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     transform: translateY(-2px);
+}
+
+/* ------------------------- */
+/* DROPDOWN DE PRIMEREACT    */
+/* ------------------------- */
+
+/* Caja del dropdown (idéntica al botón) */
+.p-dropdown-custom {
+    width: 100%;
+    background-color: rgba(3, 23, 61, 0.83) !important;
+    color: #ffffff !important;
+    border: none !important;
+    border-radius: 20px !important;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 16px;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
+}
+
+.p-dropdown-custom:hover {
+    background-color: #e3f2fd !important;
+    color: #03173d !important;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px);
+}
+
+/* Panel desplegable */
+.p-dropdown-panel-custom {
+    border-radius: 20px !important;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Opción seleccionada y hover dentro del panel */
+.p-dropdown-item:hover,
+.p-dropdown-item.p-highlight {
+    background-color: #e3f2fd !important;
+    color: #03173d !important;
 }
